@@ -51,7 +51,7 @@ export function ProductChart() {
               <Tooltip
                 formatter={(value, name) => {
                   if (name === "count") return [`${value} kpl`, "Tuotteita"];
-                  if (name === "totalValue") return [`${value.toFixed(2)} €`, "Varaston arvo"];
+                  if (name === "totalValue" && typeof value === 'number') return [`${value.toFixed(2)} €`, "Varaston arvo"];
                   return [value, name];
                 }}
               />
