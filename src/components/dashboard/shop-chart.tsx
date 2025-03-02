@@ -54,7 +54,7 @@ export function ShopChart() {
               <Tooltip
                 formatter={(value, name) => {
                   const label = name === "sales" ? "Myynti" : "Tuotto";
-                  return [`${value.toFixed(2)} €`, label];
+                  return [`${typeof value === 'number' ? value.toFixed(2) : value} €`, label];
                 }}
               />
               <Legend
